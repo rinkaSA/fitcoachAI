@@ -1,0 +1,869 @@
+[
+  {
+    "id": "workout-001",
+    "user_id": "demo-user-001",
+    "date": "2026-05-15",
+    "workout_type": "lower body strength",
+    "duration_minutes": 65,
+    "energy_before": "medium",
+    "difficulty": 8,
+    "completed": true,
+    "exercises": [
+      {
+        "name": "Smith machine squat",
+        "category": "lower body",
+        "primary_muscles": ["quads", "glutes"],
+        "equipment": "smith machine",
+        "sets": [
+          {
+            "set": 1,
+            "reps": 10,
+            "weight_kg": 40
+          },
+          {
+            "set": 2,
+            "reps": 8,
+            "weight_kg": 44
+          },
+          {
+            "set": 3,
+            "reps": 8,
+            "weight_kg": 44
+          }
+        ]
+      },
+      {
+        "name": "Bulgarian split squat",
+        "category": "lower body",
+        "primary_muscles": ["quads", "glutes"],
+        "equipment": "dumbbells",
+        "sets": [
+          {
+            "set": 1,
+            "reps": "10 per leg",
+            "weight_kg_per_hand": 12.5
+          },
+          {
+            "set": 2,
+            "reps": "10 per leg",
+            "weight_kg_per_hand": 15
+          },
+          {
+            "set": 3,
+            "reps": "8 per leg",
+            "weight_kg_per_hand": 15
+          }
+        ]
+      },
+      {
+        "name": "Plank",
+        "category": "core",
+        "primary_muscles": ["core"],
+        "equipment": "mat",
+        "sets": [
+          {
+            "set": 1,
+            "duration_seconds": 40
+          },
+          {
+            "set": 2,
+            "duration_seconds": 35
+          },
+          {
+            "set": 3,
+            "duration_seconds": 30
+          }
+        ]
+      }
+    ],
+    "soreness_after": ["quads", "glutes"],
+    "notes": "Strong lower-body session. Bulgarian split squats were challenging but completed with good control."
+  },
+  {
+    "id": "workout-002",
+    "user_id": "demo-user-001",
+    "date": "2026-05-18",
+    "workout_type": "upper body pull",
+    "duration_minutes": 60,
+    "energy_before": "high",
+    "difficulty": 7,
+    "completed": true,
+    "exercises": [
+      {
+        "name": "Assisted pull-up",
+        "category": "upper body pull",
+        "primary_muscles": ["lats", "upper back", "biceps"],
+        "equipment": "gravitron assisted pull-up machine",
+        "sets": [
+          {
+            "set": 1,
+            "reps": 8,
+            "assistance_kg": 15
+          },
+          {
+            "set": 2,
+            "reps": 7,
+            "assistance_kg": 15
+          },
+          {
+            "set": 3,
+            "reps": 8,
+            "assistance_kg": 25
+          },
+          {
+            "set": 4,
+            "reps": 8,
+            "assistance_kg": 25
+          }
+        ],
+        "note": "Used lower assistance first, then increased assistance as fatigue built up."
+      },
+      {
+        "name": "Front lat pulldown",
+        "category": "upper body pull",
+        "primary_muscles": ["lats", "upper back", "biceps"],
+        "equipment": "lat pulldown machine",
+        "sets": [
+          {
+            "set": 1,
+            "reps": 12,
+            "weight_kg": 35
+          },
+          {
+            "set": 2,
+            "reps": 10,
+            "weight_kg": 40
+          },
+          {
+            "set": 3,
+            "reps": 10,
+            "weight_kg": 40
+          }
+        ]
+      },
+      {
+        "name": "Bicep curl",
+        "category": "arms",
+        "primary_muscles": ["biceps"],
+        "equipment": "dumbbells",
+        "sets": [
+          {
+            "set": 1,
+            "reps": 12,
+            "weight_kg_per_hand": 10
+          },
+          {
+            "set": 2,
+            "reps": 10,
+            "weight_kg_per_hand": 10
+          },
+          {
+            "set": 3,
+            "reps": 9,
+            "weight_kg_per_hand": 10
+          }
+        ]
+      }
+    ],
+    "soreness_after": ["lats", "biceps"],
+    "notes": "Good pull session. Assisted pull-ups felt strong with 15 kg assistance for first two sets."
+  },
+  {
+    "id": "workout-003",
+    "user_id": "demo-user-001",
+    "date": "2026-05-21",
+    "workout_type": "glutes and hamstrings",
+    "duration_minutes": 70,
+    "energy_before": "medium",
+    "difficulty": 8,
+    "completed": true,
+    "exercises": [
+      {
+        "name": "Hip thrust",
+        "category": "lower body",
+        "primary_muscles": ["glutes", "hamstrings"],
+        "equipment": "barbell or hip thrust machine",
+        "sets": [
+          {
+            "set": 1,
+            "reps": 12,
+            "weight_kg": 70
+          },
+          {
+            "set": 2,
+            "reps": 10,
+            "weight_kg": 80
+          },
+          {
+            "set": 3,
+            "reps": 8,
+            "weight_kg": 90
+          },
+          {
+            "set": 4,
+            "reps": 8,
+            "weight_kg": 90
+          }
+        ]
+      },
+      {
+        "name": "Smith machine Romanian deadlift",
+        "category": "lower body",
+        "primary_muscles": ["hamstrings", "glutes", "lower back"],
+        "equipment": "smith machine",
+        "sets": [
+          {
+            "set": 1,
+            "reps": 10,
+            "weight_kg": 40
+          },
+          {
+            "set": 2,
+            "reps": 10,
+            "weight_kg": 45
+          },
+          {
+            "set": 3,
+            "reps": 8,
+            "weight_kg": 45
+          }
+        ]
+      },
+      {
+        "name": "Plank",
+        "category": "core",
+        "primary_muscles": ["core"],
+        "equipment": "mat",
+        "sets": [
+          {
+            "set": 1,
+            "duration_seconds": 45
+          },
+          {
+            "set": 2,
+            "duration_seconds": 40
+          },
+          {
+            "set": 3,
+            "duration_seconds": 35
+          }
+        ]
+      }
+    ],
+    "soreness_after": ["glutes", "hamstrings"],
+    "notes": "Hip thrust at 90 kg felt hard but manageable. Hamstrings felt tired after Romanian deadlifts."
+  },
+  {
+    "id": "workout-004",
+    "user_id": "demo-user-001",
+    "date": "2026-05-24",
+    "workout_type": "upper body push",
+    "duration_minutes": 55,
+    "energy_before": "medium",
+    "difficulty": 7,
+    "completed": true,
+    "exercises": [
+      {
+        "name": "Incline dumbbell bench press",
+        "category": "upper body push",
+        "primary_muscles": ["chest", "shoulders", "triceps"],
+        "equipment": "dumbbells and incline bench",
+        "sets": [
+          {
+            "set": 1,
+            "reps": 10,
+            "weight_kg_per_hand": 15
+          },
+          {
+            "set": 2,
+            "reps": 8,
+            "weight_kg_per_hand": 17.5
+          },
+          {
+            "set": 3,
+            "reps": 8,
+            "weight_kg_per_hand": 17.5
+          },
+          {
+            "set": 4,
+            "reps": 10,
+            "weight_kg_per_hand": 15
+          }
+        ],
+        "note": "Used 17.5 kg for main sets, then dropped to 15 kg for the final set."
+      },
+      {
+        "name": "Dumbbell shoulder press",
+        "category": "upper body push",
+        "primary_muscles": ["shoulders", "triceps"],
+        "equipment": "dumbbells",
+        "sets": [
+          {
+            "set": 1,
+            "reps": 10,
+            "weight_kg_per_hand": 10
+          },
+          {
+            "set": 2,
+            "reps": 9,
+            "weight_kg_per_hand": 10
+          },
+          {
+            "set": 3,
+            "reps": 8,
+            "weight_kg_per_hand": 10
+          }
+        ]
+      },
+      {
+        "name": "Plank",
+        "category": "core",
+        "primary_muscles": ["core"],
+        "equipment": "mat",
+        "sets": [
+          {
+            "set": 1,
+            "duration_seconds": 45
+          },
+          {
+            "set": 2,
+            "duration_seconds": 45
+          }
+        ]
+      }
+    ],
+    "soreness_after": ["chest", "shoulders", "triceps"],
+    "notes": "Incline dumbbell bench press felt good. Last set required a drop from 17.5 kg to 15 kg."
+  },
+  {
+    "id": "workout-005",
+    "user_id": "demo-user-001",
+    "date": "2026-05-27",
+    "workout_type": "lower body mixed",
+    "duration_minutes": 65,
+    "energy_before": "low",
+    "difficulty": 7,
+    "completed": true,
+    "exercises": [
+      {
+        "name": "Smith machine squat",
+        "category": "lower body",
+        "primary_muscles": ["quads", "glutes"],
+        "equipment": "smith machine",
+        "sets": [
+          {
+            "set": 1,
+            "reps": 10,
+            "weight_kg": 35
+          },
+          {
+            "set": 2,
+            "reps": 10,
+            "weight_kg": 40
+          },
+          {
+            "set": 3,
+            "reps": 8,
+            "weight_kg": 44
+          }
+        ],
+        "note": "Volume was slightly reduced because energy was low."
+      },
+      {
+        "name": "Smith machine Romanian deadlift",
+        "category": "lower body",
+        "primary_muscles": ["hamstrings", "glutes"],
+        "equipment": "smith machine",
+        "sets": [
+          {
+            "set": 1,
+            "reps": 10,
+            "weight_kg": 40
+          },
+          {
+            "set": 2,
+            "reps": 10,
+            "weight_kg": 45
+          },
+          {
+            "set": 3,
+            "reps": 8,
+            "weight_kg": 45
+          }
+        ]
+      },
+      {
+        "name": "Bulgarian split squat",
+        "category": "lower body",
+        "primary_muscles": ["quads", "glutes"],
+        "equipment": "dumbbells",
+        "sets": [
+          {
+            "set": 1,
+            "reps": "8 per leg",
+            "weight_kg_per_hand": 12.5
+          },
+          {
+            "set": 2,
+            "reps": "8 per leg",
+            "weight_kg_per_hand": 15
+          }
+        ],
+        "note": "Only two sets because legs were already tired."
+      }
+    ],
+    "soreness_after": ["quads", "glutes", "hamstrings"],
+    "notes": "Lower energy day. Completed the main work but reduced Bulgarian split squat volume."
+  },
+  {
+    "id": "workout-006",
+    "user_id": "demo-user-001",
+    "date": "2026-05-30",
+    "workout_type": "upper body pull",
+    "duration_minutes": 60,
+    "energy_before": "medium",
+    "difficulty": 8,
+    "completed": true,
+    "exercises": [
+      {
+        "name": "Assisted pull-up",
+        "category": "upper body pull",
+        "primary_muscles": ["lats", "upper back", "biceps"],
+        "equipment": "resistance band",
+        "sets": [
+          {
+            "set": 1,
+            "reps": 7,
+            "band_assistance_kg": 15
+          },
+          {
+            "set": 2,
+            "reps": 6,
+            "band_assistance_kg": 15
+          },
+          {
+            "set": 3,
+            "reps": 8,
+            "band_assistance_kg": 25
+          },
+          {
+            "set": 4,
+            "reps": 7,
+            "band_assistance_kg": 25
+          }
+        ],
+        "note": "Band-assisted pull-ups were harder to control than gravitron pull-ups."
+      },
+      {
+        "name": "Front lat pulldown",
+        "category": "upper body pull",
+        "primary_muscles": ["lats", "upper back", "biceps"],
+        "equipment": "lat pulldown machine",
+        "sets": [
+          {
+            "set": 1,
+            "reps": 12,
+            "weight_kg": 35
+          },
+          {
+            "set": 2,
+            "reps": 10,
+            "weight_kg": 40
+          },
+          {
+            "set": 3,
+            "reps": 8,
+            "weight_kg": 45
+          }
+        ]
+      },
+      {
+        "name": "Bicep curl",
+        "category": "arms",
+        "primary_muscles": ["biceps"],
+        "equipment": "dumbbells",
+        "sets": [
+          {
+            "set": 1,
+            "reps": 10,
+            "weight_kg_per_hand": 10
+          },
+          {
+            "set": 2,
+            "reps": 10,
+            "weight_kg_per_hand": 10
+          },
+          {
+            "set": 3,
+            "reps": 8,
+            "weight_kg_per_hand": 10
+          }
+        ]
+      }
+    ],
+    "soreness_after": ["lats", "biceps"],
+    "notes": "Pull-ups with bands were challenging. Front lat pulldown at 45 kg was possible for 8 reps."
+  },
+  {
+    "id": "workout-007",
+    "user_id": "demo-user-001",
+    "date": "2026-06-01",
+    "workout_type": "glutes focused",
+    "duration_minutes": 70,
+    "energy_before": "high",
+    "difficulty": 8,
+    "completed": true,
+    "exercises": [
+      {
+        "name": "Hip thrust",
+        "category": "lower body",
+        "primary_muscles": ["glutes", "hamstrings"],
+        "equipment": "barbell or hip thrust machine",
+        "sets": [
+          {
+            "set": 1,
+            "reps": 12,
+            "weight_kg": 70
+          },
+          {
+            "set": 2,
+            "reps": 10,
+            "weight_kg": 80
+          },
+          {
+            "set": 3,
+            "reps": 8,
+            "weight_kg": 90
+          },
+          {
+            "set": 4,
+            "reps": 8,
+            "weight_kg": 90
+          },
+          {
+            "set": 5,
+            "reps": 12,
+            "weight_kg": 70
+          }
+        ],
+        "note": "Back-off set added at 70 kg."
+      },
+      {
+        "name": "Bulgarian split squat",
+        "category": "lower body",
+        "primary_muscles": ["quads", "glutes"],
+        "equipment": "dumbbells",
+        "sets": [
+          {
+            "set": 1,
+            "reps": "10 per leg",
+            "weight_kg_per_hand": 15
+          },
+          {
+            "set": 2,
+            "reps": "9 per leg",
+            "weight_kg_per_hand": 15
+          },
+          {
+            "set": 3,
+            "reps": "8 per leg",
+            "weight_kg_per_hand": 15
+          }
+        ]
+      },
+      {
+        "name": "Plank",
+        "category": "core",
+        "primary_muscles": ["core"],
+        "equipment": "mat",
+        "sets": [
+          {
+            "set": 1,
+            "duration_seconds": 50
+          },
+          {
+            "set": 2,
+            "duration_seconds": 45
+          },
+          {
+            "set": 3,
+            "duration_seconds": 40
+          }
+        ]
+      }
+    ],
+    "soreness_after": ["glutes", "quads"],
+    "notes": "Strong glute session. Hip thrust volume was high and likely to cause soreness."
+  },
+  {
+    "id": "workout-008",
+    "user_id": "demo-user-001",
+    "date": "2026-06-03",
+    "workout_type": "upper body push",
+    "duration_minutes": 55,
+    "energy_before": "medium",
+    "difficulty": 7,
+    "completed": true,
+    "exercises": [
+      {
+        "name": "Incline dumbbell bench press",
+        "category": "upper body push",
+        "primary_muscles": ["chest", "shoulders", "triceps"],
+        "equipment": "dumbbells and incline bench",
+        "sets": [
+          {
+            "set": 1,
+            "reps": 10,
+            "weight_kg_per_hand": 15
+          },
+          {
+            "set": 2,
+            "reps": 8,
+            "weight_kg_per_hand": 17.5
+          },
+          {
+            "set": 3,
+            "reps": 7,
+            "weight_kg_per_hand": 17.5
+          },
+          {
+            "set": 4,
+            "reps": 10,
+            "weight_kg_per_hand": 15
+          }
+        ]
+      },
+      {
+        "name": "Cable triceps pressdown",
+        "category": "arms",
+        "primary_muscles": ["triceps"],
+        "equipment": "cable machine",
+        "sets": [
+          {
+            "set": 1,
+            "reps": 12,
+            "weight_kg": 20
+          },
+          {
+            "set": 2,
+            "reps": 12,
+            "weight_kg": 20
+          },
+          {
+            "set": 3,
+            "reps": 10,
+            "weight_kg": 25
+          }
+        ]
+      },
+      {
+        "name": "Plank",
+        "category": "core",
+        "primary_muscles": ["core"],
+        "equipment": "mat",
+        "sets": [
+          {
+            "set": 1,
+            "duration_seconds": 50
+          },
+          {
+            "set": 2,
+            "duration_seconds": 45
+          }
+        ]
+      }
+    ],
+    "soreness_after": ["chest", "triceps"],
+    "notes": "Push session was solid. Incline dumbbell bench still strongest around 17.5 kg per hand for 7-8 reps."
+  },
+  {
+    "id": "workout-009",
+    "user_id": "demo-user-001",
+    "date": "2026-06-05",
+    "workout_type": "lower body posterior chain",
+    "duration_minutes": 65,
+    "energy_before": "medium",
+    "difficulty": 8,
+    "completed": true,
+    "exercises": [
+      {
+        "name": "Smith machine Romanian deadlift",
+        "category": "lower body",
+        "primary_muscles": ["hamstrings", "glutes", "lower back"],
+        "equipment": "smith machine",
+        "sets": [
+          {
+            "set": 1,
+            "reps": 10,
+            "weight_kg": 40
+          },
+          {
+            "set": 2,
+            "reps": 10,
+            "weight_kg": 45
+          },
+          {
+            "set": 3,
+            "reps": 9,
+            "weight_kg": 45
+          },
+          {
+            "set": 4,
+            "reps": 8,
+            "weight_kg": 45
+          }
+        ]
+      },
+      {
+        "name": "Hip thrust",
+        "category": "lower body",
+        "primary_muscles": ["glutes", "hamstrings"],
+        "equipment": "barbell or hip thrust machine",
+        "sets": [
+          {
+            "set": 1,
+            "reps": 12,
+            "weight_kg": 70
+          },
+          {
+            "set": 2,
+            "reps": 10,
+            "weight_kg": 80
+          },
+          {
+            "set": 3,
+            "reps": 8,
+            "weight_kg": 90
+          }
+        ]
+      },
+      {
+        "name": "Plank",
+        "category": "core",
+        "primary_muscles": ["core"],
+        "equipment": "mat",
+        "sets": [
+          {
+            "set": 1,
+            "duration_seconds": 55
+          },
+          {
+            "set": 2,
+            "duration_seconds": 45
+          },
+          {
+            "set": 3,
+            "duration_seconds": 40
+          }
+        ]
+      }
+    ],
+    "soreness_after": ["hamstrings", "glutes"],
+    "notes": "Posterior chain was the focus. Romanian deadlift at 45 kg is becoming consistent."
+  },
+  {
+    "id": "workout-010",
+    "user_id": "demo-user-001",
+    "date": "2026-06-07",
+    "workout_type": "upper body pull",
+    "duration_minutes": 60,
+    "energy_before": "medium",
+    "difficulty": 7,
+    "completed": true,
+    "exercises": [
+      {
+        "name": "Assisted pull-up",
+        "category": "upper body pull",
+        "primary_muscles": ["lats", "upper back", "biceps"],
+        "equipment": "gravitron assisted pull-up machine",
+        "sets": [
+          {
+            "set": 1,
+            "reps": 8,
+            "assistance_kg": 15
+          },
+          {
+            "set": 2,
+            "reps": 8,
+            "assistance_kg": 15
+          },
+          {
+            "set": 3,
+            "reps": 9,
+            "assistance_kg": 25
+          },
+          {
+            "set": 4,
+            "reps": 8,
+            "assistance_kg": 25
+          }
+        ],
+        "note": "Good session. 15 kg assistance was manageable for two sets."
+      },
+      {
+        "name": "Front lat pulldown",
+        "category": "upper body pull",
+        "primary_muscles": ["lats", "upper back", "biceps"],
+        "equipment": "lat pulldown machine",
+        "sets": [
+          {
+            "set": 1,
+            "reps": 12,
+            "weight_kg": 35
+          },
+          {
+            "set": 2,
+            "reps": 10,
+            "weight_kg": 40
+          },
+          {
+            "set": 3,
+            "reps": 8,
+            "weight_kg": 45
+          }
+        ]
+      },
+      {
+        "name": "Bicep curl",
+        "category": "arms",
+        "primary_muscles": ["biceps"],
+        "equipment": "dumbbells",
+        "sets": [
+          {
+            "set": 1,
+            "reps": 12,
+            "weight_kg_per_hand": 10
+          },
+          {
+            "set": 2,
+            "reps": 10,
+            "weight_kg_per_hand": 10
+          },
+          {
+            "set": 3,
+            "reps": 10,
+            "weight_kg_per_hand": 10
+          }
+        ]
+      },
+      {
+        "name": "Plank",
+        "category": "core",
+        "primary_muscles": ["core"],
+        "equipment": "mat",
+        "sets": [
+          {
+            "set": 1,
+            "duration_seconds": 60
+          },
+          {
+            "set": 2,
+            "duration_seconds": 45
+          }
+        ]
+      }
+    ],
+    "soreness_after": ["lats", "biceps"],
+    "notes": "Upper pull session went well. Assisted pull-ups are improving, especially on the gravitron."
+  }
+]

@@ -1,0 +1,72 @@
+{
+  "user_id": "demo-user-001",
+  "name": "Demo Gym User",
+  "goal": "muscle gain",
+  "experience_level": "beginner-intermediate",
+  "training_frequency_goal_per_week": 3,
+  "preferred_workout_duration_minutes": 60,
+  "available_equipment": [
+    "dumbbells",
+    "smith machine",
+    "gravitron assisted pull-up machine",
+    "cable machine",
+    "lat pulldown machine",
+    "bench",
+    "resistance bands",
+    "mat"
+  ],
+  "injuries": [],
+  "preferences": [
+    "prefers gym-based strength workouts",
+    "likes dumbbell exercises",
+    "likes machine-assisted pull-ups",
+    "wants progressive overload",
+    "wants workouts adapted based on soreness and previous sessions"
+  ],
+  "dislikes": [
+    "burpees",
+    "very high-impact cardio"
+  ],
+  "current_strength_notes": {
+    "assisted_pull_up": {
+      "preferred_equipment": [
+        "gravitron",
+        "resistance bands"
+      ],
+      "recent_assistance_kg": [
+        15,
+        25
+      ],
+      "note": "Uses 15 kg assistance for stronger first sets, then increases assistance to 25 kg when tired."
+    },
+    "bulgarian_split_squat": {
+      "recent_load": "15 kg dumbbell in each hand"
+    },
+    "smith_machine_romanian_deadlift": {
+      "recent_load_kg": 45
+    },
+    "smith_machine_squat": {
+      "recent_load_kg": 44
+    },
+    "incline_dumbbell_bench_press": {
+      "recent_loads_kg_per_hand": [
+        17.5,
+        15
+      ],
+      "note": "Starts around 17.5 kg per hand, may reduce to 15 kg when fatigued."
+    },
+    "bicep_curl": {
+      "recent_load_kg_per_hand": 10
+    },
+    "hip_thrust": {
+      "recent_load_kg": 90
+    },
+    "front_lat_pulldown": {
+      "note": "Used as upper-body pulling accessory."
+    },
+    "plank": {
+      "note": "Used as core exercise."
+    }
+  },
+  "created_at": "2026-06-07"
+}
