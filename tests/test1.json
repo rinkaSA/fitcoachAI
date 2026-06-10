@@ -1,0 +1,14 @@
+[
+  {
+    "query": "What should I do if my legs are sore after Bulgarian split squats?",
+    "expected_sources": ["01_recovery_rules.md", "02_training_goals.md"]
+  },
+  {
+    "query": "What can I do instead of assisted pull-ups?",
+    "expected_sources": ["06_exercise_substitutions.md"]
+  },
+  {
+    "query": "How should I warm up before dumbbell Romanian deadlifts?",
+    "expected_sources": ["05_warmup_cooldown.md"]
+  }
+]

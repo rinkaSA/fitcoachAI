@@ -6,6 +6,74 @@ The project starts with a simple manual RAG prototype and later evolves into a m
 
 # Current Direction
 
+RAG is knowledge. Memory is personalization. Agents are workflow. State is the temporary working document passed through that workflow.
+
+RAG knowledge:
+"General training rules, recovery rules, exercise substitutions, warm-up advice"
+
+Memory:
+"This specific user tends to get sore after lower body, prefers dumbbells, pull-ups are hard, rows feel good at 20 kg"
+
+Agents:
+"Separate steps that analyze, retrieve, plan, validate, and format"
+
+State:
+"The current request being processed, plus everything agents discovered along the way"
+
+```text
+                  ┌────────────────────┐
+                  │ User check-in       │
+                  │ time, energy, sore  │
+                  │ equipment, notes    │
+                  └─────────┬──────────┘
+                            │
+                            ▼
+                  ┌────────────────────┐
+                  │ LangGraph State     │
+                  │ temporary dict      │
+                  └─────────┬──────────┘
+                            │
+                            ▼
+                  ┌────────────────────┐
+                  │ Memory Agent        │
+                  │ loads profile,      │
+                  │ history, summary    │
+                  └─────────┬──────────┘
+                            │
+                            ▼
+                  ┌────────────────────┐
+                  │ RAG Agent           │
+                  │ retrieves knowledge │
+                  └─────────┬──────────┘
+                            │
+                            ▼
+                  ┌────────────────────┐
+                  │ Planner Agent       │
+                  │ generates workout   │
+                  └─────────┬──────────┘
+                            │
+                            ▼
+                  ┌────────────────────┐
+                  │ Final workout plan  │
+                  └─────────┬──────────┘
+                            │
+             ┌──────────────┴──────────────┐
+             ▼                             ▼
+      User accepts                    User rejects
+             │                             │
+             ▼                             ▼
+ ┌────────────────────┐          ┌────────────────────┐
+ │ Save workout        │          │ Regenerate or quit  │
+ │ to history          │          │ for now no memory    │
+ └─────────┬──────────┘          └────────────────────┘
+           │
+           ▼
+ ┌────────────────────┐
+ │ Update memory       │
+ │ summary with LLM    │
+ └────────────────────┘
+ ```
+
 The first version is intentionally simple.
 
 Instead of starting with a full production vector database or complex orchestration, the MVP focuses on proving that the core loop works:
@@ -180,233 +248,494 @@ There is currently no label or flag showing that a vector store entry is stale.
 
 ## Goal
 
-## Result : in progress
+**Status: in progress**
 
-Add a multi-agent layer on top of the working RAG system.
+Add a simple LangGraph-based agent workflow on top of the existing RAG system.
 
-The current RAG system generates a workout directly from retrieved context. In Phase 2, the system should become more modular, with different agents responsible for different decisions.
-
-This phase is still TODO.
-
-
-
-## Phase 2 Idea
-
-Instead of one generation step, the future system may use several specialized agents:
+The goal of this phase is not to build a complex agent system immediately.
+The goal is to separate the current logic into clear steps:
 
 ```text
-Check-in Analyzer Agent
-        ↓
-Recovery / Readiness Agent
-        ↓
-Exercise Selection Agent
-        ↓
-Workout Planning Agent
-        ↓
-Safety Review Agent
-        ↓
-Final Response Agent
+Memory → RAG → Planner
 ```
 
-Each agent would have a clearer responsibility.
+This gives the project a clean foundation for adding more agents later.
 
+---
 
-## Phase 2 Planned Agents
+## Core Idea
 
-### 1. Check-in Analyzer Agent
+The current RAG system already works.
 
-Purpose:
-
-* read today’s check-in
-* understand energy level, soreness, sleep, available time, and available equipment
-* summarize today’s constraints
-
-Status: TODO
-
-### 2. Recovery / Readiness Agent
-
-Purpose:
-
-* decide whether the user should train hard, train light, or recover
-* use soreness and workout history
-* reduce volume or intensity when needed
-
-Status: TODO
-
-
-
-### 3. Knowledge Retrieval Agent
-
-Purpose:
-
-* decide what information should be retrieved
-* build better retrieval queries
-* possibly perform multiple retrieval passes
-
-Status: TODO
-
-Current MVP already has a simple version of this, but it is not agentic yet.
-
-
-### 4. Exercise Selection Agent
-
-Purpose:
-
-* choose exercises based on:
-
-  * goal
-  * equipment
-  * soreness
-  * previous workouts
-  * substitutions
-* avoid exercises that are not appropriate today
-
-Status: TODO
-
-### 5. Workout Planning Agent
-
-Purpose:
-
-* assemble warm-up, main workout, cooldown, and progression
-* make the plan fit the available time
-* choose sets, reps, rest, and intensity
-
-Status: TODO
-
-
-### 6. Safety Review Agent
-
-Purpose:
-
-* inspect the generated workout before showing it to the user
-* check for conflicts:
-
-  * sore muscles overloaded
-  * unavailable equipment used
-  * too much volume
-  * unsafe exercise choice
-  * mismatch with user level
-
-Status: TODO
-
-
-
-### 7. Final Response Agent
-
-Purpose:
-
-* format the final workout plan clearly
-* explain why the plan was chosen
-* include safety notes
-* include RAG sources used
-
-Status: TODO
-
-
-
-## Phase 2 Possible Orchestration
-
-Later, this can be implemented with LangGraph or a simpler custom Python orchestration first.
-
-Possible flow:
+Phase 2 keeps that logic, but organizes it into agents connected by LangGraph.
 
 ```text
-Input state
-   ↓
-Analyze check-in
-   ↓
-Retrieve knowledge
-   ↓
-Assess recovery
-   ↓
-Select exercises
-   ↓
-Build workout
-   ↓
-Review safety
-   ↓
-Return final plan
-   ↓
-Save if accepted
+RAG      = general fitness knowledge
+Memory   = user-specific personalization
+Agents   = workflow steps
+State    = temporary object passed between agents
 ```
 
-A shared state object could hold:
+Agents read from state, add their result, and pass the updated state to the next agent.
+
+---
+
+## Current Phase 2 Workflow
 
 ```text
-user_profile
-workout_history
-checkin
-retrieved_chunks
-readiness_summary
-selected_exercises
-draft_plan
-safety_review
-final_plan
+User check-in
+   ↓
+LangGraph state
+   ↓
+Memory Agent
+   ↓
+RAG Agent
+   ↓
+Planner Agent
+   ↓
+Generated workout plan
+   ↓
+User accepts / regenerates / quits
+   ↓
+If accepted:
+   - save workout to workout_history.json
+   - update memory_summary.md
 ```
 
+---
 
+## Workflow Diagram
+
+```text
+┌────────────────────┐
+│ User check-in       │
+│ time, energy, sore  │
+│ equipment, notes    │
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│ WorkoutState        │
+│ temporary state     │
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│ Memory Agent        │
+│ loads profile,      │
+│ history, memory     │
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│ RAG Agent           │
+│ builds query and    │
+│ retrieves chunks    │
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│ Planner Agent       │
+│ calls Gemini and    │
+│ creates workout     │
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│ Workout candidate   │
+│ saved as markdown   │
+│ + RAG debug files   │
+└─────────┬──────────┘
+          │
+          ▼
+┌──────────────────────────────┐
+│ User choice                  │
+│ y = accept / save             │
+│ r = regenerate                │
+│ q = quit                      │
+└─────────┬────────────────────┘
+          │
+          ▼
+┌────────────────────┐
+│ If accepted:        │
+│ save to history     │
+│ update memory       │
+└────────────────────┘
+```
+
+---
+
+## Phase 2.1 Shared State
+
+Current minimal state:
+
+```python
+class WorkoutState(TypedDict, total=False):
+    checkin: Dict[str, Any]
+
+    user_profile: Dict[str, Any]
+    workout_history: List[Dict[str, Any]]
+    memory_summary: str
+
+    retrieval_query: str
+    retrieved_knowledge: List[Dict[str, Any]]
+
+    workout_plan: str
+```
+
+### Current fields
+
+| Field                 | Purpose                        |
+| --------------------- | ------------------------------ |
+| `checkin`             | Today’s workout context        |
+| `user_profile`        | Goal, level, preferences       |
+| `workout_history`     | Recent completed workouts      |
+| `memory_summary`      | Long-term user personalization |
+| `retrieval_query`     | Query sent to the retriever    |
+| `retrieved_knowledge` | RAG chunks used for planning   |
+| `workout_plan`        | Generated workout output       |
+
+### Later fields
+
+| Field                 | Use later                   |
+| --------------------- | --------------------------- |
+| `run_id`              | Better file/debug tracking  |
+| `user_id`             | Multi-user support          |
+| `readiness_summary`   | Recovery/readiness decision |
+| `draft_plan`          | Structured internal plan    |
+| `validation_feedback` | Safety review results       |
+| `is_valid`            | Validator result            |
+| `should_regenerate`   | Conditional graph routing   |
+| `errors` / `warnings` | Debugging and observability |
+
+---
+
+## Phase 2.2 Current Agents
+
+### 1. Memory Agent
+
+**Status: implemented / in progress**
+
+Purpose:
+
+* load `demo_user.json`
+* load `workout_history.json`
+* load `memory_summary.md`
+* write them into `WorkoutState`
+
+The Memory Agent does not update memory.
+It only loads existing user context before planning.
+
+---
+
+### 2. RAG Agent
+
+**Status: implemented / in progress**
+
+Purpose:
+
+* build a retrieval query from:
+
+  * check-in
+  * user profile
+  * workout history
+  * memory summary
+* retrieve top relevant knowledge chunks
+* write `retrieval_query` and `retrieved_knowledge` into state
+
+This reuses the current local JSON + NumPy retriever.
+
+---
+
+### 3. Planner Agent
+
+**Status: implemented / in progress**
+
+Purpose:
+
+* receive:
+
+  * check-in
+  * user profile
+  * recent workout history
+  * memory summary
+  * retrieved RAG chunks
+* call Gemini
+* generate the workout plan
+* write `workout_plan` into state
+
+---
+
+## Phase 2.3 LangGraph Workflow
+
+Current graph:
+
+```text
+START
+  ↓
+memory
+  ↓
+rag
+  ↓
+planner
+  ↓
+END
+```
+
+Implemented in:
+
+```text
+app/workflows/workout_graph.py
+```
+
+The CLI runner lives in:
+
+```text
+app/workflows/run_workout.py
+```
+
+The CLI runner handles:
+
+```text
+generate → show plan → ask y/r/q
+```
+
+LangGraph handles only the generation flow for now.
+
+---
+
+## Phase 2.4 Memory Update
+
+Memory update happens after the graph finishes.
+
+It is not part of the graph yet.
+
+```text
+Workout generated
+   ↓
+User accepts
+   ↓
+Append workout to workout_history.json
+   ↓
+Call Gemini to update memory_summary.md
+```
+
+The memory updater receives:
+
+```text
+old memory summary
+new accepted workout log
+user feedback
+```
+
+It returns an updated compact memory summary.
+
+Memory should contain only useful long-term information:
+
+* stable preferences
+* disliked exercises
+* useful working weights
+* recurring soreness patterns
+* recovery patterns
+* constraints that affect future planning
+
+It should not store every detail from every workout.
+
+---
+
+## Phase 2.5 Current File Structure
+
+```text
+app/
+  agents/
+    state.py
+    memory_agent.py
+    rag_agent.py
+    planner_agent.py
+
+  workflows/
+    workout_graph.py
+    run_workout.py
+
+  memory/
+    memory_store.py
+    memory_updater.py
+
+  rag/
+    retriever.py
+    build_vector_store.py
+
+  data/
+    demo_user.json
+    workout_history.json
+    memory_summary.md
+    vector_store.json
+    generated_workouts/
+```
+
+---
+
+## Phase 2.6 Current User Loop
+
+```text
+Generate workout candidate
+   ↓
+Save candidate files:
+- workout_plan.md
+- rag_debug.md
+- rag_debug.json
+- checkin.json
+   ↓
+Ask user:
+- y = accept
+- r = regenerate
+- q = quit
+   ↓
+If y:
+- append to workout_history.json
+- update memory_summary.md
+- mark candidate folder as accepted
+```
+
+Rejected or regenerated workouts are kept only as generated artifacts for now.
+They are not used for future planning yet.
+
+Later, rejected workouts can be stored with rejection reasons and used as feedback.
+
+---
+
+## Planned Future Agents
+
+These are not implemented yet.
+
+### Intake Agent
+
+Purpose:
+
+* normalize today’s check-in
+* summarize constraints
+
+Status: TODO
+
+---
+
+### Readiness Agent
+
+Purpose:
+
+* decide training intensity for today
+* use soreness, history, and memory
+* produce a readiness summary
+
+Status: TODO
+
+---
+
+### Exercise Selection Agent
+
+Purpose:
+
+* choose exercises based on goal, soreness, equipment, and history
+* avoid inappropriate exercises
+
+Status: TODO
+
+---
+
+### Safety Validator Agent
+
+Purpose:
+
+* check if the plan violates constraints
+* detect sore-muscle overload
+* detect unavailable equipment
+* detect unrealistic volume
+
+Status: TODO
+
+---
+
+### Coach Response Agent
+
+Purpose:
+
+* format the final response
+* explain reasoning
+* include safety notes and sources
+
+Status: TODO
+
+---
+
+## Future Graph Direction
+
+Later graph:
+
+```text
+START
+  ↓
+intake
+  ↓
+memory
+  ↓
+rag
+  ↓
+readiness
+  ↓
+planner
+  ↓
+safety_validator
+  ↓
+coach_response
+  ↓
+END
+```
+
+Later conditional routing:
+
+```text
+planner
+   ↓
+safety_validator
+   ↓
+if valid: coach_response
+if invalid: planner again
+```
+
+---
 
 ## Phase 2 Success Criteria
 
-Phase 2 is successful if the system can:
+Phase 2 is successful when:
 
-* separate responsibilities across agents
-* make the generation process easier to debug
-* revise plans when safety issues are detected
-* explain which agent made which decision
-* keep the RAG retriever reusable
-* still support the accept/regenerate/save-to-history loop
+* the generation flow runs through LangGraph
+* memory, RAG, and planning are separate agents
+* the shared state is easy to inspect
+* generated candidates are saved
+* accepted workouts are saved to history
+* memory summary is updated after acceptance
+* the system is ready for readiness and safety agents later
 
+---
 
+## Current Summary
 
-# Later Phases
+Current implemented direction:
 
-## Phase 3: Better Data Model
+```text
+check-in
+   ↓
+memory_agent
+   ↓
+rag_agent
+   ↓
+planner_agent
+   ↓
+workout plan
+   ↓
+accept / regenerate / quit
+   ↓
+if accepted: save history + update memory
+```
 
-Possible improvements:
-
-* structured workout history
-* structured generated plans
-* exercise IDs
-* muscle group tags
-* equipment tags
-* progression tracking
-* completed vs skipped exercises
-* user feedback after workout
-
-
-## Phase 4: Better Storage
-
-Possible improvements:
-
-* move from JSON files to SQLite or PostgreSQL
-* store users, workouts, exercises, check-ins, and generated plans separately
-* add timestamps and versioning
-* track accepted, rejected, and regenerated plans
-
-
-
-## Phase 5: Better Retrieval
-
-Possible improvements:
-
-* replace local JSON vector store with a real vector database
-* add metadata filtering
-* add stale-entry detection
-* add incremental indexing
-* add hybrid search
-* add reranking
-* track which sources were used in final answers
-
-
-## Phase 6: Frontend
-
-Possible improvements:
-
-* simple web UI
-* check-in form
-* generated workout display
-* accept/regenerate buttons
-* workout history view
-* RAG debug view for development
-
+This is the first simple multi-agent version.

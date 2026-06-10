@@ -12,7 +12,10 @@
       {
         "name": "Smith machine squat",
         "category": "lower body",
-        "primary_muscles": ["quads", "glutes"],
+        "primary_muscles": [
+          "quads",
+          "glutes"
+        ],
         "equipment": "smith machine",
         "sets": [
           {
@@ -35,7 +38,10 @@
       {
         "name": "Bulgarian split squat",
         "category": "lower body",
-        "primary_muscles": ["quads", "glutes"],
+        "primary_muscles": [
+          "quads",
+          "glutes"
+        ],
         "equipment": "dumbbells",
         "sets": [
           {
@@ -58,7 +64,9 @@
       {
         "name": "Plank",
         "category": "core",
-        "primary_muscles": ["core"],
+        "primary_muscles": [
+          "core"
+        ],
         "equipment": "mat",
         "sets": [
           {
@@ -76,7 +84,10 @@
         ]
       }
     ],
-    "soreness_after": ["quads", "glutes"],
+    "soreness_after": [
+      "quads",
+      "glutes"
+    ],
     "notes": "Strong lower-body session. Bulgarian split squats were challenging but completed with good control."
   },
   {
@@ -92,7 +103,11 @@
       {
         "name": "Assisted pull-up",
         "category": "upper body pull",
-        "primary_muscles": ["lats", "upper back", "biceps"],
+        "primary_muscles": [
+          "lats",
+          "upper back",
+          "biceps"
+        ],
         "equipment": "gravitron assisted pull-up machine",
         "sets": [
           {
@@ -121,7 +136,11 @@
       {
         "name": "Front lat pulldown",
         "category": "upper body pull",
-        "primary_muscles": ["lats", "upper back", "biceps"],
+        "primary_muscles": [
+          "lats",
+          "upper back",
+          "biceps"
+        ],
         "equipment": "lat pulldown machine",
         "sets": [
           {
@@ -144,7 +163,9 @@
       {
         "name": "Bicep curl",
         "category": "arms",
-        "primary_muscles": ["biceps"],
+        "primary_muscles": [
+          "biceps"
+        ],
         "equipment": "dumbbells",
         "sets": [
           {
@@ -165,7 +186,10 @@
         ]
       }
     ],
-    "soreness_after": ["lats", "biceps"],
+    "soreness_after": [
+      "lats",
+      "biceps"
+    ],
     "notes": "Good pull session. Assisted pull-ups felt strong with 15 kg assistance for first two sets."
   },
   {
@@ -181,7 +205,10 @@
       {
         "name": "Hip thrust",
         "category": "lower body",
-        "primary_muscles": ["glutes", "hamstrings"],
+        "primary_muscles": [
+          "glutes",
+          "hamstrings"
+        ],
         "equipment": "barbell or hip thrust machine",
         "sets": [
           {
@@ -209,7 +236,11 @@
       {
         "name": "Smith machine Romanian deadlift",
         "category": "lower body",
-        "primary_muscles": ["hamstrings", "glutes", "lower back"],
+        "primary_muscles": [
+          "hamstrings",
+          "glutes",
+          "lower back"
+        ],
         "equipment": "smith machine",
         "sets": [
           {
@@ -232,7 +263,9 @@
       {
         "name": "Plank",
         "category": "core",
-        "primary_muscles": ["core"],
+        "primary_muscles": [
+          "core"
+        ],
         "equipment": "mat",
         "sets": [
           {
@@ -250,7 +283,10 @@
         ]
       }
     ],
-    "soreness_after": ["glutes", "hamstrings"],
+    "soreness_after": [
+      "glutes",
+      "hamstrings"
+    ],
     "notes": "Hip thrust at 90 kg felt hard but manageable. Hamstrings felt tired after Romanian deadlifts."
   },
   {
@@ -266,7 +302,11 @@
       {
         "name": "Incline dumbbell bench press",
         "category": "upper body push",
-        "primary_muscles": ["chest", "shoulders", "triceps"],
+        "primary_muscles": [
+          "chest",
+          "shoulders",
+          "triceps"
+        ],
         "equipment": "dumbbells and incline bench",
         "sets": [
           {
@@ -295,7 +335,10 @@
       {
         "name": "Dumbbell shoulder press",
         "category": "upper body push",
-        "primary_muscles": ["shoulders", "triceps"],
+        "primary_muscles": [
+          "shoulders",
+          "triceps"
+        ],
         "equipment": "dumbbells",
         "sets": [
           {
@@ -318,7 +361,9 @@
       {
         "name": "Plank",
         "category": "core",
-        "primary_muscles": ["core"],
+        "primary_muscles": [
+          "core"
+        ],
         "equipment": "mat",
         "sets": [
           {
@@ -332,7 +377,11 @@
         ]
       }
     ],
-    "soreness_after": ["chest", "shoulders", "triceps"],
+    "soreness_after": [
+      "chest",
+      "shoulders",
+      "triceps"
+    ],
     "notes": "Incline dumbbell bench press felt good. Last set required a drop from 17.5 kg to 15 kg."
   },
   {
@@ -348,7 +397,10 @@
       {
         "name": "Smith machine squat",
         "category": "lower body",
-        "primary_muscles": ["quads", "glutes"],
+        "primary_muscles": [
+          "quads",
+          "glutes"
+        ],
         "equipment": "smith machine",
         "sets": [
           {
@@ -372,7 +424,10 @@
       {
         "name": "Smith machine Romanian deadlift",
         "category": "lower body",
-        "primary_muscles": ["hamstrings", "glutes"],
+        "primary_muscles": [
+          "hamstrings",
+          "glutes"
+        ],
         "equipment": "smith machine",
         "sets": [
           {
@@ -395,7 +450,10 @@
       {
         "name": "Bulgarian split squat",
         "category": "lower body",
-        "primary_muscles": ["quads", "glutes"],
+        "primary_muscles": [
+          "quads",
+          "glutes"
+        ],
         "equipment": "dumbbells",
         "sets": [
           {
@@ -412,7 +470,11 @@
         "note": "Only two sets because legs were already tired."
       }
     ],
-    "soreness_after": ["quads", "glutes", "hamstrings"],
+    "soreness_after": [
+      "quads",
+      "glutes",
+      "hamstrings"
+    ],
     "notes": "Lower energy day. Completed the main work but reduced Bulgarian split squat volume."
   },
   {
@@ -428,7 +490,11 @@
       {
         "name": "Assisted pull-up",
         "category": "upper body pull",
-        "primary_muscles": ["lats", "upper back", "biceps"],
+        "primary_muscles": [
+          "lats",
+          "upper back",
+          "biceps"
+        ],
         "equipment": "resistance band",
         "sets": [
           {
@@ -457,7 +523,11 @@
       {
         "name": "Front lat pulldown",
         "category": "upper body pull",
-        "primary_muscles": ["lats", "upper back", "biceps"],
+        "primary_muscles": [
+          "lats",
+          "upper back",
+          "biceps"
+        ],
         "equipment": "lat pulldown machine",
         "sets": [
           {
@@ -480,7 +550,9 @@
       {
         "name": "Bicep curl",
         "category": "arms",
-        "primary_muscles": ["biceps"],
+        "primary_muscles": [
+          "biceps"
+        ],
         "equipment": "dumbbells",
         "sets": [
           {
@@ -501,7 +573,10 @@
         ]
       }
     ],
-    "soreness_after": ["lats", "biceps"],
+    "soreness_after": [
+      "lats",
+      "biceps"
+    ],
     "notes": "Pull-ups with bands were challenging. Front lat pulldown at 45 kg was possible for 8 reps."
   },
   {
@@ -517,7 +592,10 @@
       {
         "name": "Hip thrust",
         "category": "lower body",
-        "primary_muscles": ["glutes", "hamstrings"],
+        "primary_muscles": [
+          "glutes",
+          "hamstrings"
+        ],
         "equipment": "barbell or hip thrust machine",
         "sets": [
           {
@@ -551,7 +629,10 @@
       {
         "name": "Bulgarian split squat",
         "category": "lower body",
-        "primary_muscles": ["quads", "glutes"],
+        "primary_muscles": [
+          "quads",
+          "glutes"
+        ],
         "equipment": "dumbbells",
         "sets": [
           {
@@ -574,7 +655,9 @@
       {
         "name": "Plank",
         "category": "core",
-        "primary_muscles": ["core"],
+        "primary_muscles": [
+          "core"
+        ],
         "equipment": "mat",
         "sets": [
           {
@@ -592,7 +675,10 @@
         ]
       }
     ],
-    "soreness_after": ["glutes", "quads"],
+    "soreness_after": [
+      "glutes",
+      "quads"
+    ],
     "notes": "Strong glute session. Hip thrust volume was high and likely to cause soreness."
   },
   {
@@ -608,7 +694,11 @@
       {
         "name": "Incline dumbbell bench press",
         "category": "upper body push",
-        "primary_muscles": ["chest", "shoulders", "triceps"],
+        "primary_muscles": [
+          "chest",
+          "shoulders",
+          "triceps"
+        ],
         "equipment": "dumbbells and incline bench",
         "sets": [
           {
@@ -636,7 +726,9 @@
       {
         "name": "Cable triceps pressdown",
         "category": "arms",
-        "primary_muscles": ["triceps"],
+        "primary_muscles": [
+          "triceps"
+        ],
         "equipment": "cable machine",
         "sets": [
           {
@@ -659,7 +751,9 @@
       {
         "name": "Plank",
         "category": "core",
-        "primary_muscles": ["core"],
+        "primary_muscles": [
+          "core"
+        ],
         "equipment": "mat",
         "sets": [
           {
@@ -673,7 +767,10 @@
         ]
       }
     ],
-    "soreness_after": ["chest", "triceps"],
+    "soreness_after": [
+      "chest",
+      "triceps"
+    ],
     "notes": "Push session was solid. Incline dumbbell bench still strongest around 17.5 kg per hand for 7-8 reps."
   },
   {
@@ -689,7 +786,11 @@
       {
         "name": "Smith machine Romanian deadlift",
         "category": "lower body",
-        "primary_muscles": ["hamstrings", "glutes", "lower back"],
+        "primary_muscles": [
+          "hamstrings",
+          "glutes",
+          "lower back"
+        ],
         "equipment": "smith machine",
         "sets": [
           {
@@ -717,7 +818,10 @@
       {
         "name": "Hip thrust",
         "category": "lower body",
-        "primary_muscles": ["glutes", "hamstrings"],
+        "primary_muscles": [
+          "glutes",
+          "hamstrings"
+        ],
         "equipment": "barbell or hip thrust machine",
         "sets": [
           {
@@ -740,7 +844,9 @@
       {
         "name": "Plank",
         "category": "core",
-        "primary_muscles": ["core"],
+        "primary_muscles": [
+          "core"
+        ],
         "equipment": "mat",
         "sets": [
           {
@@ -758,7 +864,10 @@
         ]
       }
     ],
-    "soreness_after": ["hamstrings", "glutes"],
+    "soreness_after": [
+      "hamstrings",
+      "glutes"
+    ],
     "notes": "Posterior chain was the focus. Romanian deadlift at 45 kg is becoming consistent."
   },
   {
@@ -774,7 +883,11 @@
       {
         "name": "Assisted pull-up",
         "category": "upper body pull",
-        "primary_muscles": ["lats", "upper back", "biceps"],
+        "primary_muscles": [
+          "lats",
+          "upper back",
+          "biceps"
+        ],
         "equipment": "gravitron assisted pull-up machine",
         "sets": [
           {
@@ -803,7 +916,11 @@
       {
         "name": "Front lat pulldown",
         "category": "upper body pull",
-        "primary_muscles": ["lats", "upper back", "biceps"],
+        "primary_muscles": [
+          "lats",
+          "upper back",
+          "biceps"
+        ],
         "equipment": "lat pulldown machine",
         "sets": [
           {
@@ -826,7 +943,9 @@
       {
         "name": "Bicep curl",
         "category": "arms",
-        "primary_muscles": ["biceps"],
+        "primary_muscles": [
+          "biceps"
+        ],
         "equipment": "dumbbells",
         "sets": [
           {
@@ -849,7 +968,9 @@
       {
         "name": "Plank",
         "category": "core",
-        "primary_muscles": ["core"],
+        "primary_muscles": [
+          "core"
+        ],
         "equipment": "mat",
         "sets": [
           {
@@ -863,7 +984,51 @@
         ]
       }
     ],
-    "soreness_after": ["lats", "biceps"],
+    "soreness_after": [
+      "lats",
+      "biceps"
+    ],
     "notes": "Upper pull session went well. Assisted pull-ups are improving, especially on the gravitron."
+  },
+  {
+    "date": "2026-06-10",
+    "source": "generated_langgraph_rag_plan",
+    "status": "completed",
+    "checkin": {
+      "available_time_minutes": 45,
+      "energy_level": "medium",
+      "soreness": [
+        "quads",
+        "glutes"
+      ],
+      "equipment_today": [
+        "dumbbells",
+        "pull-up bar"
+      ],
+      "notes": "I slept okay but my legs are still sore."
+    },
+    "generated_plan": "TODAY'S WORKOUT:\nHere is your tailored workout for today, focusing on your upper body and core while being mindful of your leg soreness and today's available equipment.\n\n**Focus**: Upper Body Strength & Hypertrophy\n**Duration**: Approximately 45 minutes\n\n**1. Warm-up (5 minutes)**\n*   **Light Cardio**: 2-3 minutes of marching in place, light jumping jacks (if comfortable for legs), or arm circles.\n*   **Dynamic Stretches**:\n    *   Arm Circles (forward & backward): 10-15 reps each direction\n    *   Scapular Retractions/Protraction (shoulder squeezes): 10-12 reps\n    *   Cat-Cow Stretch (on mat): 8-10 reps\n    *   Bodyweight Squats (shallow, controlled, only if comfortable for sore legs): 5-8 reps, focusing on mobility.\n\n**2. Main Workout (35 minutes)**\nPerform the exercises in order. Aim for controlled movements and progressive overload where possible (more reps, slightly heavier dumbbells if form allows). Rest 60-90 seconds between sets.\n\n*   **1. Dumbbell Floor Press**\n    *   **Sets**: 3-4\n    *   **Reps**: 8-12\n    *   **Weight**: Start with 15 kg per hand. If form allows and it feels good, try to reach 10-12 reps.\n    *   **Notes**: Lie on your back on the mat with knees bent and feet flat. Hold a dumbbell in each hand, elbows on the floor at shoulder level. Press the dumbbells straight up until your arms are fully extended, then slowly lower them back down until your triceps lightly touch the floor.\n\n*   **2. Band-Assisted Pull-ups (on pull-up bar)**\n    *   **Sets**: 3\n    *   **Reps**: 6-10\n    *   **Assistance**: Use a resistance band for assistance. Since band-assisted pull-ups were noted as harder to control than the gravitron in the past (workout 006), start with a band that offers sufficient assistance to get 6-7 good reps. You used 15kg assistance on gravitron for 8 reps last time (workout 010), so aim for a band that feels equivalent or slightly more assistance to maintain reps.\n    *   **Notes**: Loop a resistance band over the pull-up bar and place one or both feet into the loop. Grip the bar with an overhand grip, slightly wider than shoulder-width. Pull yourself up until your chin clears the bar, focusing on squeezing your lats. Slowly lower yourself down.\n\n*   **3. Dumbbell Overhead Triceps Extension**\n    *   **Sets**: 3\n    *   **Reps**: 10-12\n    *   **Weight**: Choose a dumbbell you can control for 10-12 reps (e.g., 10-15 kg).\n    *   **Notes**: Sit on a mat or stand. Hold one dumbbell with both hands, extending it overhead. Keeping your elbows close to your head, slowly lower the dumbbell behind your head by bending your elbows. Extend your arms to push the dumbbell back up.\n\n*   **4. Dumbbell Bicep Curl**\n    *   **Sets**: 3\n    *   **Reps**: 10-12\n    *   **Weight**: Use 10 kg per hand. Try to hit 12 reps if possible, as you hit 12 reps for your first set last time (workout 010).\n    *   **Notes**: Stand or sit with a dumbbell in each hand, palms facing forward. Keeping your elbows tucked in, curl the dumbbells up towards your shoulders. Squeeze your biceps at the top, then slowly lower the dumbbells back down.\n\n*   **5. Plank**\n    *   **Sets**: 2\n    *   **Duration**: 50-60 seconds\n    *   **Notes**: Hold a strong, straight line from head to heels, engaging your core and glutes. Breathe deeply.\n\n**3. Cool-down (5 minutes)**\n*   **Gentle Stretching**:\n    *   Triceps Stretch (one arm overhead, gently pull elbow): 30 seconds per arm\n    *   Biceps Stretch (extend arm, palm up, gently pull fingers back): 30 seconds per arm\n    *   Chest Stretch (hands clasped behind back or against a wall): 30-45 seconds\n    *   Upper Back/Lat Stretch (reach overhead, gentle side bend): 30 seconds per side\n*   **Deep Breathing**: Finish with a minute of slow, deep breaths to bring your heart rate down.\n\n---\n\nWHY THIS WORKOUT:\n\nThis workout is specifically designed for you based on your current profile and check-in:\n\n1.  **Addresses Soreness**: Your quads and glutes are sore today. This workout smartly avoids any heavy lower body exercises, focusing entirely on your upper body and core to allow your legs to recover as per the \"Recovery rules\" (Retrieved chunk 1).\n2.  **Utilizes Available Equipment**: You specified \"dumbbells\" and \"pull-up bar\" as available today. All exercises are selected to perfectly match this equipment, avoiding machines or benches that were not listed as available today, even if they're usually in your gym.\n3.  **Fits Time Constraint**: The estimated 42-minute duration fits comfortably within your 45-minute available time today.\n4.  **Supports Muscle Gain Goal**: The workout incorporates resistance exercises with moderate volume and rep ranges (8-12 reps for strength, 10-12 for isolation) suitable for muscle hypertrophy and progressive overload (Retrieved chunk 3). You're encouraged to challenge yourself with reps or by aiming for slightly more assistance on pull-ups.\n5.  **Incorporates Preferences**: It includes dumbbell exercises and assisted pull-ups, which you enjoy. We've adapted the assisted pull-ups to resistance bands due to gravitron unavailability today, a known alternative from your history and \"Exercise substitutions\" (Retrieved chunk 2, 5).\n6.  **Progressive Overload Encouragement**: For exercises like Dumbbell Floor Press and Bicep Curls, the plan encourages you to aim for more reps or consider a slight weight increase if your form remains perfect, fostering progressive overload. For pull-ups, trying to increase reps with the same assistance, or eventually reducing assistance, is key.\n\n---\n\nPLAN:\n\n*   **Warm-up**: Dynamic movements to prepare your upper body and activate your core. Light bodyweight squats are included for mobility, but keep them gentle.\n*   **Main Workout**:\n    *   Start with a compound pushing movement (Dumbbell Floor Press) for your chest, shoulders, and triceps. This acts as a good substitute for incline dumbbell press when a bench isn't available.\n    *   Move to a compound pulling movement (Band-Assisted Pull-ups) to hit your back and biceps.\n    *   Follow with isolation exercises for triceps (Dumbbell Overhead Triceps Extension) and biceps (Dumbbell Bicep Curl) to ensure balanced arm development.\n    *   Finish with a core exercise (Plank) to build stability.\n*   **Cool-down**: Gentle static stretches for the muscles worked, promoting flexibility and aiding recovery.\n\n---\n\nSAFETY NOTES:\n\n*   **Listen to your body**: If you feel any sharp pain, dizziness, or unusual discomfort at any point, stop the exercise immediately.\n*   **Form over weight**: Maintain proper form throughout all exercises. If your form breaks down, reduce the weight or reps.\n*   **Soreness**: Your legs are sore today, so be extra mindful during any transitional movements and do not push any leg exercises. This workout is designed to give your legs a break.\n\n---\n\nRAG SOURCES USED:\n*   Retrieved chunk 1 (01_recovery_rules.md)\n*   Retrieved chunk 2 (06_exercise_subtitutions.md)\n*   Retrieved chunk 3 (02_training_goals.md)\n*   Retrieved chunk 4 (05_warmup_cooldown.md)\n*   Retrieved chunk 5 (04_bodyweight_exercises.md)",
+    "rag_sources": [
+      {
+        "source": "01_recovery_rules.md",
+        "score": 0.7786
+      },
+      {
+        "source": "06_exercise_subtitutions.md",
+        "score": 0.7601
+      },
+      {
+        "source": "02_training_goals.md",
+        "score": 0.7486
+      },
+      {
+        "source": "05_warmup_cooldown.md",
+        "score": 0.731
+      },
+      {
+        "source": "04_bodyweight_exercises.md",
+        "score": 0.7094
+      }
+    ]
   }
 ]
