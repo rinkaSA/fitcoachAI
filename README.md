@@ -144,7 +144,7 @@ The following parts are already done or currently being implemented:
 This MVP is intentionally manual and simple.
 
 Current limitations:
-
+* NO CACHING!
 * no production vector database
 * no optimized indexing
 * no metadata filtering
