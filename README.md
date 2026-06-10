@@ -1,4 +1,4 @@
-# RepMind Project Plan
+# FitcoachAI Project Plan
 
 This is a Python-based AI fitness planning project. The goal is to build a practical workout assistant that can use user profile data, workout history, daily check-ins, and exercise knowledge to generate safe and realistic workout plans.
 
