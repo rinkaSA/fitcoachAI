@@ -1,0 +1,37 @@
+[
+  {
+    "id": "06_exercise_subtitutions.md::chunk_0",
+    "source": "06_exercise_subtitutions.md",
+    "chunk_index": 0,
+    "content": "# Exercise substitutions\n\nIf the user cannot do pull-ups, use band-assisted pull-ups, negative pull-ups, inverted rows, or one-arm dumbbell rows.\n\nIf the user cannot do push-ups, use incline push-ups, knee push-ups, or dumbbell floor press.\n\nIf the user cannot squat comfortably, use box squats, goblet squats with reduced range, or glute bridges.\n\nIf the user has no bench, replace dumbbell bench press with dumbbell floor press.\n\nIf the user has no dumbbells, use bodyweight exercises or resistance bands.",
+    "score": 0.7568649053573608
+  },
+  {
+    "id": "01_recovery_rules.md::chunk_0",
+    "source": "01_recovery_rules.md",
+    "chunk_index": 0,
+    "content": "# Recovery rules\n\nIf the user reports strong soreness in a muscle group, avoid high-volume or high-intensity training for that muscle group today.\n\nIf the user slept poorly or reports low energy, reduce total workout volume by about 20-30%.\n\nAvoid training the same muscle group intensely on consecutive days.\n\nIf the user reports pain rather than normal soreness, recommend stopping the painful movement and choosing a safer alternative.\n\nFor a showcase app, always include a short safety note: stop if sharp pain, dizziness, or unusual discomfort occurs.",
+    "score": 0.7543193697929382
+  },
+  {
+    "id": "02_training_goals.md::chunk_0",
+    "source": "02_training_goals.md",
+    "chunk_index": 0,
+    "content": "# Training goals\n\nFor general fitness, use a balanced mix of strength, mobility, and light conditioning.\n\nFor muscle gain, prioritize resistance exercises, moderate-to-high volume, controlled technique, and progressive overload.\n\nFor strength, prioritize compound movements, lower rep ranges, longer rest, and gradual load progression.\n\nFor fat loss, combine resistance training with moderate conditioning and sustainable consistency.\n\nFor beginners, prioritize simple exercises, good technique, moderate effort, and avoiding excessive soreness.",
+    "score": 0.7350097298622131
+  },
+  {
+    "id": "05_warmup_cooldown.md::chunk_0",
+    "source": "05_warmup_cooldown.md",
+    "chunk_index": 0,
+    "content": "# Warm-up and cooldown\n\nEvery workout should start with a short warm-up.\n\nA warm-up can include light cardio, mobility, and easier versions of the planned exercises.\n\nFor upper-body workouts, include shoulder circles, scapular movement, light rows, or incline push-ups.\n\nFor lower-body workouts, include hip circles, bodyweight squats, glute bridges, and light hinges.\n\nEvery workout should end with a short cooldown.\n\nA cooldown can include gentle stretching and breathing.\n\nDo not use aggressive stretching if it causes pain.",
+    "score": 0.7147762775421143
+  },
+  {
+    "id": "04_bodyweight_exercises.md::chunk_2",
+    "source": "04_bodyweight_exercises.md",
+    "chunk_index": 2,
+    "content": "## Pull-up\nPrimary muscles: lats, upper back, biceps.\nUse when: upper-body pull training is appropriate.\nRegression: assisted pull-up, band-assisted pull-up, or negative pull-up.",
+    "score": 0.7117664813995361
+  }
+]
